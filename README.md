@@ -20,9 +20,7 @@ All algorithms work with **floating‑point GeoTIFF** DEMs and rely on the **GDA
 
 ## Compilation
 
-The project can be built using either **CMake** (recommended) or a **traditional Makefile**.
-
- Using Visual Studio 2022 (Windows)
+Using Visual Studio 2022 (Windows)
 
 - Create a new empty C++ console project.
 - Add all `.cpp` and `.h` files to the project.
@@ -99,11 +97,11 @@ The code has also been successfully compiled on **Ubuntu 22.04** with `g++ 11.4.
 
 This project is provided for research and educational purposes. Please cite the original papers when using the algorithms:
 
-- Wang & Liu (2006) – *International Journal of Geographical Information Science*
-- Barnes et al. (2014) – *Computers & Geosciences*
-- Wei et al. (2019) – *Environmental Modelling & Software*
-- Zhou et al. (2017) – *Transactions in GIS*
-- Planchon & Darboux (2002) – *Earth Surface Processes and Landforms*
+- Wang & Liu (2006) – *International Journal of Geographical Information Science* - 《An efficient method for identifying and filling surface depressions in digital elevation models for hydrologic analysis and modelling》
+- Barnes et al. (2014) – *Computers & Geosciences* - 《Priority-flood: An optimal depression-filling and watershed-labeling algorithm for digital elevation models》
+- Wei et al. (2019) – *Environmental Modelling & Software* - 《Efficient Priority-Flood depression filling in raster digital elevation models》
+- Zhou et al. (2017) – *Transactions in GIS* - 《An efficient variant of the Priority-Flood algorithm for filling depressions in raster digital elevation models》
+- Planchon & Darboux (2002) – *Earth Surface Processes and Landforms* - 《A Variant of the Planchon and Darboux Algorithm for Filling Depressions in Raster Digital Elevation Models》
 
 ---
 
