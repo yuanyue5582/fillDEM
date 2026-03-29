@@ -1,4 +1,4 @@
-﻿#include <queue>
+#include <queue>
 #include <algorithm>
 #include "dem.h"
 #include "Node.h"
@@ -27,6 +27,7 @@ typedef std::vector<Node> NodeVector;
 typedef std::priority_queue<Node, NodeVector, Node::Greater> PriorityQueue;
 
 void FillDEM_Zhou_OnePass(const char* inputFile, const char* outputFilledPath);
+void FillDEM_Zhou_TwoPass(const char* inputFile, const char* outputFilledPath);
 int FillDEM_Wang(const char* inputFile, const char* outputFilledPath);
 int FillDEM_Barnes(const char* inputFile, const char* outputFilledPath);
 void fillDEM_Wei(const char* inputFile, const char* outputFilledPath);
@@ -92,12 +93,21 @@ int main() {
     int m = 3;
     
     if (m == 1) {
-		FillDEM_Barnes(filename.c_str(), outputFilename.c_str());
+		FillDEM_Zhou_OnePass(filename.c_str(), outputFilename.c_str());
     }
     else if (m == 2) {
-		fillDEM_Wei(filename.c_str(), outputFilename.c_str());
+		FillDEM_Wang(filename.c_str(), outputFilename.c_str());
     }
 	else if (m == 3) {
+		FillDEM_Barnes(filename.c_str(), outputFilename.c_str());
+	}
+	else if (m == 4) {
+		FillDEM_Zhou_TwoPass(filename.c_str(), outputFilename.c_str());
+	}
+	else if (m == 5) {
+		fillDEM_Wei(filename.c_str(), outputFilename.c_str());
+	}
+	else if (m == 6) {
 		FillDEM_PD(filename.c_str(), outputFilename.c_str());
 	}
     
